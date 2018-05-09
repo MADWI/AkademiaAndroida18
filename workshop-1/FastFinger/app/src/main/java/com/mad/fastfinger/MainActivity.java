@@ -21,20 +21,20 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	private void init(Bundle savedInstanceState) {
-		readScoreFromSavedState(savedInstanceState);
 		initViews();
+		readScoreFromSavedState(savedInstanceState);
 		setupScoreButton();
+	}
+
+	private void initViews() {
+		scoreButton = findViewById(R.id.scoreButton);
+		scoreTextView = findViewById(R.id.scoreTextView);
 	}
 
 	private void readScoreFromSavedState(Bundle savedInstanceState) {
 		if (savedInstanceState != null) {
 			score = savedInstanceState.getInt(SCORE_KEY);
 		}
-	}
-
-	private void initViews() {
-		scoreButton = findViewById(R.id.scoreButton);
-		scoreTextView = findViewById(R.id.scoreTextView);
 	}
 
 	private void setupScoreButton() {
