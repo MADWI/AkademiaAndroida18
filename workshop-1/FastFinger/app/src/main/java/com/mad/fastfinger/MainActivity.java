@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+	private static final String SCORE_KEY = "SCORE_KEY";
 	private int score;
 	private Button scoreButton;
 	private TextView scoreTextView;
@@ -16,12 +17,19 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		init();
+		init(savedInstanceState);
 	}
 
-	private void init() {
+	private void init(Bundle savedInstanceState) {
+		readScoreFromSavedState(savedInstanceState);
 		initViews();
 		setupScoreButton();
+	}
+
+	private void readScoreFromSavedState(Bundle savedInstanceState) {
+		if (savedInstanceState != null) {
+			score = savedInstanceState.getInt(SCORE_KEY);
+		}
 	}
 
 	private void initViews() {
@@ -43,5 +51,11 @@ public class MainActivity extends AppCompatActivity {
 	private void setCurrentScoreToTextView() {
 		String currentScoreText = String.valueOf(score);
 		scoreTextView.setText(currentScoreText);
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putInt(SCORE_KEY, score);
 	}
 }
