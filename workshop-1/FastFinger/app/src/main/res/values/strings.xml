@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FastFinger</string>
+    <string name="get_point">Get point</string>
 </resources>
