@@ -2,60 +2,21 @@ package com.mad.fastfinger;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-	private static final String SCORE_KEY = "SCORE_KEY";
-	private int score;
-	private Button scoreButton;
-	private TextView scoreTextView;
+	private Player player1 = new Player();
+	private Player player2 = new Player();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		init(savedInstanceState);
+		init();
 	}
 
-	private void init(Bundle savedInstanceState) {
-		initViews();
-		readScoreFromSavedState(savedInstanceState);
-		setupScoreButton();
-	}
-
-	private void initViews() {
-		scoreButton = findViewById(R.id.scoreButton);
-		scoreTextView = findViewById(R.id.scoreTextView);
-	}
-
-	private void readScoreFromSavedState(Bundle savedInstanceState) {
-		if (savedInstanceState != null) {
-			score = savedInstanceState.getInt(SCORE_KEY);
-		}
-	}
-
-	private void setupScoreButton() {
-		setCurrentScoreToTextView();
-		scoreButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				score++;
-				setCurrentScoreToTextView();
-			}
-		});
-	}
-
-	private void setCurrentScoreToTextView() {
-		String currentScoreText = String.valueOf(score);
-		scoreTextView.setText(currentScoreText);
-	}
-
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		outState.putInt(SCORE_KEY, score);
+	private void init() {
+		player1.init(findViewById(R.id.boardPlayer1));
+		player2.init(findViewById(R.id.boardPlayer2));
 	}
 }
