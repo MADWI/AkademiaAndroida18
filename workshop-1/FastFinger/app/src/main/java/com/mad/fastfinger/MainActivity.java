@@ -1,22 +1,20 @@
 package com.mad.fastfinger;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-	private Player player1 = new Player();
-	private Player player2 = new Player();
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		init();
+		Board board = new Board();
+		board.init(findViewById(R.id.boardPlayer1), findViewById(R.id.boardPlayer2));
 	}
 
-	private void init() {
-		player1.init(findViewById(R.id.boardPlayer1));
-		player2.init(findViewById(R.id.boardPlayer2));
+	private boolean isInPortraitOrientation() {
+		return getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
 	}
 }
