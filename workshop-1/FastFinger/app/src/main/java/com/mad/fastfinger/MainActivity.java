@@ -10,7 +10,11 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Board board = new Board();
+		initBoard();
+	}
+
+	private void initBoard() {
+		Board board = new Board(isInPortraitOrientation());
 		board.init(findViewById(R.id.boardPlayer1), findViewById(R.id.boardPlayer2));
 	}
 

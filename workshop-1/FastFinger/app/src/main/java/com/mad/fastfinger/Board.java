@@ -9,8 +9,16 @@ public class Board {
 
 	private final Player player1 = new Player();
 	private final Player player2 = new Player();
+	private final boolean isInPortraitOrientation;
+
+	public Board(boolean isInPortraitOrientation) {
+		this.isInPortraitOrientation = isInPortraitOrientation;
+	}
 
 	public void init(@NonNull View boardViewPlayer1, @NonNull View boardViewPlayer2) {
+		if (isInPortraitOrientation) {
+			boardViewPlayer1.setRotation(180);
+		}
 		initPointsView(boardViewPlayer1, player1);
 		initPointsView(boardViewPlayer2, player2);
 	}
