@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	tools:context=".MainActivity">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:padding="@dimen/choose_view_text_padding"
+		android:shadowColor="@color/colorAccent"
+		android:shadowDx="0"
+		android:shadowDy="0"
+		android:shadowRadius="130"
+		android:text="@string/choose_view_from_menu"
+		android:textColor="@color/colorAccent"
+		android:textSize="@dimen/choose_view_text_size"
+		android:textStyle="bold" />
+
+</LinearLayout>

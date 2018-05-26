@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">ViewExplorer</string>
+	<string name="choose_view_from_menu">Choose view from menu</string>
+	<string name="relative">Relative</string>
+	<string name="frame">Frame</string>
+	<string name="constraint">Constraint</string>
+	<string name="title_activity_relative_view">RelativeViewActivity</string>
+</resources>

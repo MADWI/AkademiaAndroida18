@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ConstraintViewActivity">
+
+	<TextView
+		android:id="@+id/percentage_bias_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50dp"
+		android:background="@android:color/holo_green_light"
+		android:text="Percentage bias"
+		android:textColor="@android:color/black"
+		android:textSize="20sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.2"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/top_to_bottom_of_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:background="@android:color/holo_purple"
+		android:text="Top to bottom of"
+		android:textColor="@android:color/black"
+		android:textSize="20sp"
+		app:layout_constraintTop_toBottomOf="@id/percentage_bias_view" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@android:color/holo_purple"
+		android:text="End parent and to bottom of"
+		android:textColor="@android:color/black"
+		app:layout_constraintBottom_toBottomOf="@id/top_to_bottom_of_view"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<Button
+		android:id="@+id/cell_1_view"
+		style="@style/ButtonCell"
+		android:layout_marginTop="100dp"
+		android:text="1"
+		app:layout_constraintEnd_toStartOf="@id/cell_2_view"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/percentage_bias_view" />
+
+	<Button
+		android:id="@+id/cell_2_view"
+		style="@style/ButtonCell"
+		android:text="2"
+		app:layout_constraintEnd_toStartOf="@id/cell_3_view"
+		app:layout_constraintStart_toEndOf="@id/cell_1_view"
+		app:layout_constraintTop_toTopOf="@id/cell_1_view" />
+
+	<Button
+		android:id="@+id/cell_3_view"
+		style="@style/ButtonCell"
+		android:text="3"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/cell_2_view"
+		app:layout_constraintTop_toTopOf="@id/cell_2_view" />
+
+	<Button
+		android:id="@+id/cell_4_view"
+		style="@style/ButtonCell"
+		android:layout_marginTop="50dp"
+		android:text="4"
+		app:layout_constraintBottom_toTopOf="@id/cell_5_view"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/cell_2_view"
+		app:layout_constraintVertical_bias="0.7"
+		app:layout_constraintVertical_chainStyle="packed" />
+
+	<Button
+		android:id="@+id/cell_5_view"
+		style="@style/ButtonCell"
+		android:text="5"
+		app:layout_constraintBottom_toTopOf="@id/cell_6_view"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/cell_4_view" />
+
+	<Button
+		android:id="@+id/cell_6_view"
+		style="@style/ButtonCell"
+		android:text="6"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/cell_5_view" />
+
+</android.support.constraint.ConstraintLayout>
