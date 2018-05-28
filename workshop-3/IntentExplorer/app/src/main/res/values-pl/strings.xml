@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">IntentExplorer</string>
+	<string name="send">Wyślij</string>
+	<string name="message">Wiadomość</string>
+	<string name="intent_message">Wiadomość Intent-a</string>
+</resources>

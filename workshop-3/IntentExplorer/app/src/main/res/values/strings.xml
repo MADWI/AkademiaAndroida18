@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">IntentExplorer</string>
+	<string name="title_activity_details">DetailsActivity</string>
+	<string name="send">Send</string>
+	<string name="message">Message</string>
+	<string name="intent_message">Message from Intent</string>
+</resources>
