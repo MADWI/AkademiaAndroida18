@@ -6,28 +6,18 @@
 	android:layout_height="match_parent"
 	tools:context=".DetailsActivity">
 
-	<TextView
-		android:id="@+id/message_label_view"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_margin="20dp"
-		android:text="@string/intent_message"
-		android:textColor="@android:color/black"
-		android:textSize="30sp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+	<include
+		android:id="@+id/message_input_output_layout"
+		layout="@layout/message_input_output" />
 
-	<TextView
-		android:id="@+id/message_view"
+	<Button
+		android:id="@+id/send_button"
+		style="@style/Widget.AppCompat.Button.Colored"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_margin="10dp"
-		android:textColor="@android:color/holo_red_dark"
-		android:textSize="20sp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/message_label_view"
-		tools:text="Message" />
+		android:text="@string/send_back"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/message_input_output_layout" />
 
 </android.support.constraint.ConstraintLayout>

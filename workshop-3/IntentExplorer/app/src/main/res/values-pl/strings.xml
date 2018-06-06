@@ -4,4 +4,7 @@
 	<string name="send">Wyślij</string>
 	<string name="message">Wiadomość</string>
 	<string name="intent_message">Wiadomość Intent-a</string>
+	<string name="message_sender_format">Wiadomość od %s</string>
+	<string name="send_back">Wyślij wstecz</string>
+	<string name="no_incoming_messages">Brak wiadomości przychodzących</string>
 </resources>

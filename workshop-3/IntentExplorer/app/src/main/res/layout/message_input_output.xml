@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="@dimen/message_input_margin">
+
+	<TextView
+		android:id="@+id/message_sender"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="@string/message_sender_format"
+		android:textColor="@color/colorAccent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/incoming_message"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:maxLines="5"
+		android:paddingBottom="50dp"
+		android:text="@string/no_incoming_messages"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/message_sender" />
+
+	<android.support.constraint.Group
+		android:id="@+id/incoming_group"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:constraint_referenced_ids="message_sender, incoming_message" />
+
+	<android.support.design.widget.TextInputLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="@string/message"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/incoming_message">
+
+		<android.support.design.widget.TextInputEditText
+			android:id="@+id/message_input"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:textColor="@android:color/black"
+			android:textSize="@dimen/input_message_text_size" />
+
+	</android.support.design.widget.TextInputLayout>
+
+</android.support.constraint.ConstraintLayout>
