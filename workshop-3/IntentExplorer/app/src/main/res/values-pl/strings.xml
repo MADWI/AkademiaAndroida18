@@ -7,4 +7,8 @@
 	<string name="message_sender_format">Wiadomość od %s</string>
 	<string name="send_back">Wyślij wstecz</string>
 	<string name="no_incoming_messages">Brak wiadomości przychodzących</string>
+	<string name="picture">Zdjęcie</string>
+	<string name="browser">Przeglądarka</string>
+	<string name="camera">Aparat</string>
+	<string name="call">Zadzwoń</string>
 </resources>

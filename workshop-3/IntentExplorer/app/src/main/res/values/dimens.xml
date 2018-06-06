@@ -2,4 +2,5 @@
 <resources>
 	<dimen name="input_message_text_size">20sp</dimen>
 	<dimen name="message_input_margin">8dp</dimen>
+	<dimen name="fab_margin">16dp</dimen>
 </resources>

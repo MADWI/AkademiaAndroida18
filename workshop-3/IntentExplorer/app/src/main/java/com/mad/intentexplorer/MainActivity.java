@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.Group;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	private TextView incomingMessageView;
 	private TextView messageSenderView;
 	private Group incomingViewsGroup;
+	private FloatingActionButton helpButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		incomingMessageView = findViewById(R.id.incoming_message);
 		incomingViewsGroup = findViewById(R.id.incoming_group);
 		messageInputView = findViewById(R.id.message_input);
+		helpButton = findViewById(R.id.help_button);
+		helpButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, IntentsActivity.class));
+			}
+		});
 	}
 
 	private void hideIncomingViews() {
