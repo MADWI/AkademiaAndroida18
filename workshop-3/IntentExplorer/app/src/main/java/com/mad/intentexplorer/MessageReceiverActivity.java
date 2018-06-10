@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class DetailsActivity extends AppCompatActivity implements View.OnClickListener {
+public class MessageReceiverActivity extends AppCompatActivity implements View.OnClickListener {
 
 	private static final String userName = "Alice";
 	private TextView messageSenderView;
@@ -20,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_details);
+		setContentView(R.layout.activity_message_receiver);
 		init();
 	}
 

@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	@NonNull
 	private Intent getIntentWithMessageData() {
-		Intent intent = new Intent(this, DetailsActivity.class);
+		Intent intent = new Intent(this, MessageReceiverActivity.class);
 		String message = messageInputView.getText().toString();
 		intent.putExtra(MESSAGE_KEY, message);
 		intent.putExtra(MESSAGE_SENDER_KEY, userName);
